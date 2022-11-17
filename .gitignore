@@ -1,0 +1,10 @@
+*.log
+rmtclone
+ff*
+ffmpegc/*
+*.db
+rmtsa/*
+nginx/*
+ia
+yt-dlp
+config*
