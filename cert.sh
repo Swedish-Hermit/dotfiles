@@ -1,5 +1,5 @@
 #!/bin/bash
-cert='RMT-PKI-RTCA_Robin!0027s Media Team Root X1_BASE64.crt'
+cert='~/dotfiles/certs/RMT-PKI-RTCA_Robin!0027s Media Team Root X1_BASE64.crt'
 sh ~/dotfiles/pingcheck.sh
 set -o errexit
 set -o nounset
