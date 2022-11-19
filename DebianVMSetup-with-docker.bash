@@ -8,7 +8,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 else
     echo "apt-get :: Error no supported operating system found... exiting" ; exit 1 ;
 fi
-#
 ###error if not ran with sudo
 [[ "$(id -u)" == 0 ]] || { echo "Run: sudo !!" ; exit 1 ; }
 ###update repos and upgrade system if needed
