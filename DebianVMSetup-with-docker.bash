@@ -15,13 +15,13 @@ apt-get update && apt-get upgrade -y || { echo "apt-get :: Error Upgrading ... e
 ###install variues tools
 apt-get install rsync open-vm-tools tmux wget apt-transport-https ca-certificates curl gnupg lsb-release -y || { echo "apt-get :: Error Installing packages! ... exiting" ; exit 1 ; }
 ###grab docker install script and run it
-curl -fsSL https://download.docker.com/linux/debian/gpg |  gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg || { echo "curl || gpg :: Error curling gpg>
+#curl -fsSL https://download.docker.com/linux/debian/gpg |  gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg || { echo "curl || gpg :: Error curling gpg>
 ###add necessary info to docker.list
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" >> /etc/apt/source>
+#echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" >> /etc/apt/source>
 ###update apt; install docker packages
 apt-get update && apt-get install docker-ce docker-ce-cli containerd.io -y || { echo "apt-get :: Error installing docker packages ... exiting" >&2 ; exit 1 ; }
 ###curl docker-compose image
-curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose || { echo "curl :: Error curlin>
+#curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose || { echo "curl :: Error curlin>
 ###set permissions
 chmod 770 /usr/bin/docker-compose || { echo "chmod :: Error setting permissions ... exiting" >&2 ; exit 1 ; }
 usermod -aG docker administrator || { echo "usermod :: Error ... exiting" >&2 ; exit 1 ; }
