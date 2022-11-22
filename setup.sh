@@ -7,4 +7,3 @@
   . ~/.zshrc
   echo "done adding aliases, ssh configs"
 exit 0
-echo "have a nice day!"
