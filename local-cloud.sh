@@ -4,5 +4,5 @@ sh ~/dotfilespingcheck.sh
 sleep 1;
 cd /mnt/local/cdn
 ###rsync the local repo to offsite
-rsync -ahvzuP . --no-perms --delete --exclude msdn/ --exclude Cursed_recordings_with_the_bois/ --exclude sidezeoarchive/ $1 > /mnt/local/cdnbackup.log
+rmtclone sync --exclude=/msdn/ --exclude=/sidezeoarchive/ --exclude=/Cursed_recordings_with_the_bois/ -P . $1 > /mnt/local/cdnbackup.log
 exit 0
