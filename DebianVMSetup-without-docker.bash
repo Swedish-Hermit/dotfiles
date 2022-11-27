@@ -1,6 +1,4 @@
 #!/bin/bash
-###check so networking works
-ping -q -c1 cloudflare.com &>/dev/null && echo online && exit 0 || echo offline && exit 1
 ###check if the OS is supported
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         echo "OS Supported executing script"
