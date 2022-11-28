@@ -11,11 +11,14 @@ fi
 ###update repos and upgrade system if needed
 apt-get update && apt-get upgrade -y || { echo "apt-get :: Error Upgrading ... exiting" ; exit 1 ; }
 ###install variues tools
-apt-get install rsync open-vm-tools tmux wget apt-transport-https ca-certificates curl gnupg lsb-release -y || { echo "apt-get :: Error Installing packages! ... exiting" ; exit 1 ; }
+apt-get install rsync open-vm-tools git tmux wget apt-transport-https ca-certificates curl gnupg lsb-release -y || { echo "apt-get :: Error Installing packages! ... exiting" ; exit 1 ; }
 ###grab docker install script and run it
-#curl -fsSL https://download.docker.com/linux/debian/gpg |  gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg || { echo "curl || gpg :: Error curling gpg>
+mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ###add necessary info to docker.list
-#echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" >> /etc/apt/source>
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ###update apt; install docker packages
 apt-get update && apt-get install docker-ce docker-ce-cli containerd.io -y || { echo "apt-get :: Error installing docker packages ... exiting" >&2 ; exit 1 ; }
 ###curl docker-compose image

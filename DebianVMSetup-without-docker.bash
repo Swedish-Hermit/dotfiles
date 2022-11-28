@@ -12,7 +12,7 @@ fi
 ###update repos and upgrade system if needed
 apt-get update && apt-get upgrade -y || { echo "apt-get :: Error Upgrading ... exiting" ; exit 1 ; }
 ###install variues tools
-apt-get install rsync open-vm-tools tmux wget -y || { echo "apt-get :: Error Installing packages! ... exiting" ; exit 1 ; }
+apt-get install rsync curl git open-vm-tools tmux wget -y || { echo "apt-get :: Error Installing packages! ... exiting" ; exit 1 ; }
 ###Install RMT motd
 wget https://cdn.robinsmediateam.dev/Temp/motd -O /etc/motd  || { echo "apt-get :: Error Getting key ... exiting" ; exit 1 ; }
 ###create ssh dir and set set perms
