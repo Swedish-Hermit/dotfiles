@@ -1,6 +1,7 @@
 #!/bin/bash
-echo Starting local backups
-cd /mnt/files && rclone copy -P . /mnt/data/files/
-cd /mnt/users && rclone copy -P . /mnt/data/users
-echo Starting offsite
-cd /mnt && rclone copy -P files /mnt/offsite/files && rclone copy -P users /mnt/offsite/users
+
+echo Starting HEL1
+cd /mnt && rclone copy -P files /mnt/HEL1/files --ignore-existing --exclude=/datahoarding/ --exclude=/.recycle/ > ~/HEL1files.log & rclone copy -P users /mnt/HEL1/users --ignore-existing --exclude=/.recycle/ > ~/HEL1users.log
+
+echo Starting FSN1
+cd /mnt && rclone copy -P files /mnt/FSN1/files --ignore-existing --exclude=/datahoarding/ --exclude=/.recycle/ > ~/FSN1files.log & rclone copy -P users /mnt/FSN1/users --ignore-existing --exclude=/.recycle/ > ~/FSN1users.log
