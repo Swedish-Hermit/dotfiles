@@ -1,23 +1,45 @@
 #!/usr/bin/env bash
 alias dps='docker ps -a --format "table {{.Names}}\t{{.Status}}\t{{.ID}}\t{{.Ports}}"'
+alias dvl='docker volume ls'
+# clear
 alias clean='clear'
 alias c='clear'
-alias dvl='docker volume ls'
+alias cc='clear'
+# git
 alias gs='git status'
 alias gp='git push'
 alias gc='git commit -m '
 alias gpl='git pull'
 alias gd='git add .'
+# ls
 alias ll='ls -lha --color=auto'
+alias l='ls'
+alias cl='c && ll'
+alias cg='compgen -ca'
+# cd
 alias home='cd ~'
+alias ccd='cd'
+# tmux
 alias tmx='tmux'
 alias tmxa='tmux a'
 alias tmxl='tmux ls'
+# external ip
 alias wan='dig +short txt ch whoami.cloudflare @1.0.0.1'
+alias lan='ip a'
+# wireguard
 alias wdown='sudo wg-quick down'
 alias wup='sudo wg-quick up'
+# zfs
 alias zl='sudo zfs list; sudo zpool status; sudo zpool list'
+alias zfl='sudo zfs list'
+alias zpl='sudo zpool list'
+# alias list
 alias las='cat ~/dotfiles/.aliases'
-alias hp='sudo ssacli ctrl all show config'
-alias ccd='cd'
-alias l='ls'
+# hp raid controller
+alias hpa='sudo ssacli ctrl all show config'
+alias hps=' sudo ssacli ctrl slot=2 array all show status'
+# show weather & moon
+alias weather='curl wttr.in/Gullspang'
+alias moon='curl https://wttr.in/Moon'
+# show network stats
+alias vns='vnstat'
