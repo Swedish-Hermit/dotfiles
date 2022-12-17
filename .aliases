@@ -13,6 +13,7 @@ alias gd='git add .'
 # ls
 alias ll='ls -lha --color=auto'
 alias l='ls'
+alias cl='c && ll'
 # cd
 alias home='cd ~'
 alias ccd='cd'
