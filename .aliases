@@ -1,24 +1,34 @@
 #!/usr/bin/env bash
 alias dps='docker ps -a --format "table {{.Names}}\t{{.Status}}\t{{.ID}}\t{{.Ports}}"'
+alias dvl='docker volume ls'
+# clear
 alias clean='clear'
 alias c='clear'
-alias dvl='docker volume ls'
+# git
 alias gs='git status'
 alias gp='git push'
 alias gc='git commit -m '
 alias gpl='git pull'
 alias gd='git add .'
+# ls
 alias ll='ls -lha --color=auto'
+alias l='ls'
+# cd
 alias home='cd ~'
+alias ccd='cd'
+# tmux
 alias tmx='tmux'
 alias tmxa='tmux a'
 alias tmxl='tmux ls'
 alias wan='dig +short txt ch whoami.cloudflare @1.0.0.1'
+# wireguard
 alias wdown='sudo wg-quick down'
 alias wup='sudo wg-quick up'
+# zfs
 alias zl='sudo zfs list; sudo zpool status; sudo zpool list'
+# alias list
 alias las='cat ~/dotfiles/.aliases'
+# hp raid controller
 alias hp='sudo ssacli ctrl all show config'
-alias ccd='cd'
-alias l='ls'
+# show weather
 alias weather='curl wttr.in/Gullspang'
