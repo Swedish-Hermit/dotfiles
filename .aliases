@@ -36,6 +36,7 @@ alias zpl='sudo zpool list'
 # alias list
 alias las='cat ~/dotfiles/.aliases'
 # hp raid controller
-alias hp='sudo ssacli ctrl all show config'
+alias hpa='sudo ssacli ctrl all show config'
+alias hps=' sudo ssacli ctrl slot=2 array all show status'
 # show weather
 alias weather='curl wttr.in/Gullspang'
