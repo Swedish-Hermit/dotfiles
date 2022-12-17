@@ -38,5 +38,6 @@ alias las='cat ~/dotfiles/.aliases'
 # hp raid controller
 alias hpa='sudo ssacli ctrl all show config'
 alias hps=' sudo ssacli ctrl slot=2 array all show status'
-# show weather
+# show weather & moon
 alias weather='curl wttr.in/Gullspang'
+alias moon='curl https://wttr.in/Moon'
