@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt-get install zsh git curl -y
+apt-get install zsh git curl -y
 mkdir ~/.ssh;
 echo "" >> ~/.ssh/config
 echo "Include ~/dotfiles/config" > ~/.ssh/config
