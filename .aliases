@@ -41,3 +41,5 @@ alias hps=' sudo ssacli ctrl slot=2 array all show status'
 # show weather & moon
 alias weather='curl wttr.in/Gullspang'
 alias moon='curl https://wttr.in/Moon'
+# show network stats
+alias vns='vnstat'
