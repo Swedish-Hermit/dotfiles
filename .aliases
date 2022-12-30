@@ -14,7 +14,7 @@ alias gd='git add .'
 # ls
 alias ll='ls -lha --color=auto'
 alias l='ls'
-alias cl='c && ll'
+alias cl='c && l'
 alias cg='compgen -ca'
 # cd
 alias home='cd ~'
