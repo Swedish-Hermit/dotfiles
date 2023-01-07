@@ -1,11 +1,11 @@
 #!/bin/bash
-###check if network is up
+# check if network is up
 sh ~/dotfiles/pingcheck.sh
 if [ "$#" -ne 1 ];
         then echo -e "\nUsage: sh riksdagen.sh path\n";
         exit 1;
 fi
-###run backups
+# run backups if above has succeded
 echo "mounting riksdagen"
 rclone mount -vvvP riksdagen: $1 --daemon --allow-other
 sleep 1;
