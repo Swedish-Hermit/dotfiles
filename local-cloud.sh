@@ -1,7 +1,7 @@
 #!/bin/bash
 [[ ! -d "$1" ]] && echo "$1" does not exist! 
 # run ping check for network connectivity
-sh ~/dotfilespingcheck.sh
+sh ~/dotfiles/pingcheck.sh
 sleep 1;
 cd $1
 # rsync the local repo to offsite
