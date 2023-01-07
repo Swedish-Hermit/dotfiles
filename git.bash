@@ -1,5 +1,4 @@
 #!/bin/bash
-HTML=/var/www/html
 COMMAND='git pull'
 cd $HTML/rikardssonbygg && $COMMAND
 cd $HTML/robinsmediateam.dev && $COMMAND
