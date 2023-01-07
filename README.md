@@ -1,2 +1,2 @@
 # dotfiles
-A bunch of files :)
+A bunch of files for my usage :)

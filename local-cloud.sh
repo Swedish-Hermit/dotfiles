@@ -1,8 +1,9 @@
 #!/bin/bash
+[[ ! -d "$1" ]] && echo "$1" does not exist! 
 # run ping check for network connectivity
 sh ~/dotfilespingcheck.sh
 sleep 1;
-cd /mnt/local/cdn
+cd $1
 # rsync the local repo to offsite
-rclone sync --exclude=/msdn/ --exclude=/sidezeoarchive/ --exclude=/Cursed_recordings_with_the_bois/ -P . $1 > /mnt/local/cdnbackup.log
+rclone sync -P $1 $2 > /mnt/local/cdnbackup.log
 exit 0
