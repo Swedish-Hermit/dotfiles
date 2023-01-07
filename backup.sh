@@ -1,12 +1,13 @@
 #!/bin/bash
+# run pingcheck script
 sh ~/dotfiles/pingcheck.sh
 set -o errexit
-
+# if rclone does not exit" 
 if ! command -v rclone > /dev/null; then
    echo "Error rclone binary not found" >&2
    exit 1
 fi
-
+# if rclone runs then exit"
 if pgrep -x rclone >/dev/null
 then
    echo "nope"
