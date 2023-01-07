@@ -1,7 +1,4 @@
 #!/bin/bash
-[[ whoami != root ]] && echo "must be run as root!"
-# updated sources and install requierd files 
-apt-get update
 # create .ssh and continue even if it fails
 mkdir ~/.ssh;
 # make empty config file
