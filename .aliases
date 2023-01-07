@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
+# docker
 alias dps='docker ps -a --format "table {{.Names}}\t{{.Status}}\t{{.ID}}\t{{.Ports}}"'
 alias dvl='docker volume ls'
 # clear
 alias clean='clear'
 alias c='clear'
 alias cc='clear'
+alias ccc='clear'
 # git
 alias gs='git status'
 alias gp='git push'
@@ -43,3 +45,7 @@ alias weather='curl wttr.in/Gullspang'
 alias moon='curl https://wttr.in/Moon'
 # show network stats
 alias vns='vnstat'
+# tail
+alias tai='tail'
+alias tal='tail'
+
