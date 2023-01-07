@@ -27,6 +27,7 @@ alias tmxa='tmux a'
 alias tmxl='tmux ls'
 # external ip
 alias wan='dig +short txt ch whoami.cloudflare @1.0.0.1'
+# list all internal ip
 alias lan='ip a'
 # wireguard
 alias wdown='sudo wg-quick down'
