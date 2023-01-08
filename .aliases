@@ -21,6 +21,8 @@ alias cg='compgen -ca'
 # cd
 alias home='cd ~'
 alias ccd='cd'
+alias ..='cd ../'
+alias back='cd ../'
 # tmux
 alias tmx='tmux'
 alias tmxa='tmux a'
